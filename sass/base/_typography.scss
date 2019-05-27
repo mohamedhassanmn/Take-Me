@@ -1,0 +1,57 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-grey;
+  padding: 3rem;
+}
+.heading__text{
+  text-transform: uppercase;
+  color: $color-white;
+  display: block;
+  padding-bottom: 2rem;
+  margin-bottom: 6rem;
+}
+
+.heading-secondary{
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  word-spacing: .8rem;
+  display:inline-block;
+  background-image:-webkit-gradient(linear,left top, right top,from($color-primary-light),to($color-primary-dark));
+  background-image:linear-gradient(to right,$color-primary-light,$color-primary-dark);
+  -webkit-background-clip: text;
+  color:transparent;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  &:hover{
+    text-shadow: 0 10rem 20rem $color-primary;
+
+          -webkit-transform: skewX(15deg) skewY(2deg) scale(1.10);
+                  transform: skewX(15deg) skewY(2deg);
+}
+
+}
+.heading-tertiary{
+  font-size: $default-para-size;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.paragraph{
+  font-size: $default-para-size;
+  text-align: left;
+
+    &:not(:last-child){
+    margin-bottom: 3.5rem;
+  }
+}
+.icon-feature{
+  font-size:5rem;
+  display:inline-block;
+  background-image:-webkit-gradient(linear,left top, right top,from($color-primary-light),to($color-primary-dark));
+  background-image:linear-gradient(to right,$color-primary-light,$color-primary-dark);
+  -webkit-background-clip: text;
+  color:transparent;
+}

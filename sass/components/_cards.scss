@@ -1,0 +1,128 @@
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 50rem;
+
+  &__side {
+    height: 50rem;
+    transition: all 0.8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black,0.15);
+
+    &-fside {
+      &--1,&--2,&--3{
+        background-color: $color-white;
+      }
+
+    }
+
+    &-bside {
+      transform: rotateY(180deg);
+      &--1{
+        background-image: linear-gradient(to right bottom,$color-tour1-light,$color-tour1-dark);
+      }
+      &--2{
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+      }
+      &--3{
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+      }
+
+    }
+  }
+
+  &:hover &__side-fside {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side-bside {
+    transform: rotateY(0);
+  }
+
+  &__image {
+    height: 23rem;
+    background-size: cover;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0,100% 0,100% 90%,0 100%);
+    &-1{
+      background-image: linear-gradient(to right bottom,$color-tour1-light,$color-tour1-dark), url("../img/nat-5.jpg");
+    }
+    &-2{
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpg);
+    }
+    &-3{
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $color-white;
+    position: absolute;
+    width: 60%;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+  }
+
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    box-decoration-break: clone;
+    &--1 {
+      background-image: linear-gradient(to right bottom,rgba($color-tour1-light,.8),rgba($color-tour1-dark,.8));
+    }
+    &--2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85));
+    }
+    &--3 {
+        background-image: linear-gradient(to right bottom,rgba(41, 152, 255, 0.8),rgba(86, 67, 250, 0.8));
+    }
+  }
+
+  &__listings {
+    text-align: center;
+
+    ul {
+      list-style: none;
+      width: 60%;
+      margin: 5rem auto;
+
+      li {
+        text-align: center;
+        padding-bottom: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid #eee;
+        }
+      }
+    }
+  }
+  &__cta{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:90%;
+    color: $color-white;
+    .pricebox{
+text-align: center;
+    }
+    .priceonly{
+font-size: 1.5rem;
+text-transform: uppercase;
+    }
+    .price{
+font-size: 6rem;
+text-transform: uppercase;
+font-weight: 300;
+margin-bottom: 8rem;
+    }
+  }
+}

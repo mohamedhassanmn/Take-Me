@@ -1,0 +1,12 @@
+.feature-box{
+background-color: rgba(255, 255, 255, 0.75);
+text-align: center;
+padding: 3rem;
+border-radius: 3px;
+transition: transform .3s;
+&:hover{
+  transform: translateY(-5rem) scale(1.10);
+  box-shadow: 0 5rem 10rem (rgba(0, 0, 0, 0.15));
+}
+
+}
